@@ -18,7 +18,7 @@ body::before{
 }
 
 body {
-  /* background-color: #143F6B; */
+  background-color: #143F6B;
   margin: 0;
   max-height: 100vh;
  
