@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@100&family=Open+Sans:wght@300&family=Roboto:wght@300&family=Smooch+Sans:wght@200&display=swap');
+
+img {
+  pointer-events: none;
+  position: fixed;
+  z-index: 5;
+}
+
+body::before{
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+* {
+  cursor: none;
+}
+
+body {
+  /* background-color: #143F6B; */
+  margin: 0;
+  max-height: 100vh;
+ 
+  justify-content: center;
+  align-items: center;
+}
+.Wvid{
+  z-index: -10;
+  position: fixed;
+  filter: blur(0.5rem);
+  min-width: 100%;
+  min-height: 100%;
+}
+video, canvas {
+    /* override other styles to make responsive */
+    
+    width: 500px    !important;
+    height: auto   !important;
+  }
+
+.top{
+  display: flex;
+  justify-content: center;
+  color: bisque;
+}
+
+.title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  
+}
+
+.piano {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.white {
+  --width: 50px;
+  background-color: white;
+  border: 1px solid rgb(27, 26, 69);
+}
+
+.white.active {
+  background-color: #CCC;
+}
+
+.black {
+  --width: 30px;
+  background-color: rgb(30, 22, 59);
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+}
+  
