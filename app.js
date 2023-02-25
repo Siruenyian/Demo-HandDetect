@@ -13,7 +13,7 @@ const defaultParams = {
   fontSize: 25,
 };
 
-document.querySelector(".Wvid").autoplay = true;
+// document.querySelector(".Wvid").autoplay = true;
 var cursor = document.getElementById("cursor");
 // select all
 const video = document.querySelector("#video");
@@ -43,8 +43,8 @@ handTrack.startVideo(video).then((status) => {
       (stream) => {
         video.srcObject = stream;
         //runDetection();
-
-        setInterval(runDetection, 0.5);
+        // setInterval(runDetection, 0.5);
+        requestAnimationFrame(runDetection);
       },
       (err) => console.log(err)
     );
@@ -175,16 +175,16 @@ function runDetection() {
     }
 
     // if (CursorObj.x < Key0Obj.x + Key0Obj.width) {
-    //   console.log("URMOMGAY");
+    //   console.log("COLLIDE");
     // }
     // if (CursorObj.x + CursorObj.width > Key0Obj.x) {
-    //   console.log("URMOM COLLIDE 2");
+    //   console.log("COLLIDE 2");
     // }
     // if (CursorObj.y < Key0Obj.y + Key0Obj.height) {
-    //   console.log("URMOM COLLIDE 3");
+    //   console.log("COLLIDE 3");
     // }
     // if (CursorObj.y + CursorObj.height > Key0Obj.y) {
-    //   console.log("URMOM COLLIDE 2");
+    //   console.log("COLLIDE 2");
     // }
 
     // console.log("ayyo bitches = " + xglobal + " " + yglobal);
